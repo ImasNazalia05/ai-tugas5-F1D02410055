@@ -1,0 +1,15 @@
+{
+    "judul" : "Penentuan Status dan Mitigasi Kualitas Udara",
+    "batas" : "Aturan ini berasal dari dua sumber yaitu dari Peraturan Menteri LHK No.14 Tahun 2020 tentang Indeks Standar Udara(ISPU) dan data resmi dari BMKG yang berfokus pada pencemaran udara akibat karhutla. Hasil program ini merupakan saran awal untuk status dan mitigasi bukan keputusan akhir.",
+    "sumber" : {
+        "S1" : "Kualitas Udara Indonesia, BMKG, https://iklim.bmkg.go.id/id/kualitas-udara-indonesia/ , diakses 3 November 2026",
+        "S2" : "Indeks Standar Pencemaran Udara, Permen LHK No.14 Tahun 2020, https://peraturan.bpk.go.id/Download/156214/Permen%20LHK%20Nomor%2014%20Tahun%202020.pdf , diakses pada 12 November 2026"
+    },
+    "aturan" : [
+        {"id" : "R1", "jika" :["konsentrasi PM2.5 lebih dari 150", "warna langit terlihat kuning pekat"], "mode": "atau", "maka": "kualitas udara sangat tidak sehat", "sumber": "S1"},
+        {"id" : "R2", "jika" :["kualitas udara sangat tidak sehat", "jarak pandang kurang dari 1 km"], "mode": "dan", "maka": "status siaga karhutla dan batasi transportasi darat", "sumber": "S2"},
+        {"id" : "R3", "jika" :["kualitas udara sangat tidak sehat", "jarak pandang kurang dari 1 km"], "mode": "dan", "maka": "terbitkan peringatan dini pembatasan transportasi akibat jarak pandang terbatas", "sumber": "S2"},
+        {"id" : "R4", "jika" :["kualitas udara sangat tidak sehat", "terdapat titik panas (hotspot) di wilayah sekitar"], "mode": "dan", "maka": "tingkatkan frekuensi patroli lahan dan sematkan status siaga karhutla", "sumber": "S2"},
+        {"id" : "R5", "jika" :["kualitas udara sangat tidak sehat", "terdapat titik panas (hotspot) di wilayah sekitar"], "mode": "dan", "maka": "tetapkan status darurat pencemaran udara dan hentikan semua aktivitas luar ruangan", "sumber": "S2"}
+    ]
+}
