@@ -53,21 +53,21 @@ Sistem ini menggunakan **Forward Chaining (FC)**.
 - **Fakta awal:** pengguna menjawab `y` pada `konsentrasi PM2.5 melampaui angka 150` dan `jarak pandang kurang dari 1 km`.
 - **Hasil:** aturan R1 terpicu, lalu berantai memicu R3. Kesimpulan: **terbitkan peringatan dini pembatasan transportasi akibat jarak pandang terbatas**.
 
-![Kasus 1](screenshot/kasus1.png)
+![Kasus 1](screenshot/Kasus1.png)
 
 **Kasus 2 (Positif, menghasilkan kesimpulan)**
 
 - **Fakta awal:** pengguna menjawab `y` pada `konsentrasi PM2.5 melampaui angka 250` dan `terdapat titik panas (hotspot) di wilayah sekitar`.
 - **Hasil:** aturan R2 terpicu, lalu berantai memicu R5. Kesimpulan: **tetapkan status darurat pencemaran udara dan hentikan semua aktivitas luar ruangan**.
 
-![Kasus 2](screenshot/kasus2.png)
+![Kasus 2](screenshot/Kasus2.png)
 
 **Kasus 3 (Negatif, tidak menghasilkan kesimpulan)**
 
 - **Fakta awal:** pengguna hanya menjawab `y` pada satu fakta, yaitu `jarak pandang kurang dari 1 km`.
 - **Hasil:** tidak ada fakta tentang konsentrasi polutan yang terpenuhi, sehingga R1 dan R2 tidak terpicu dan R3 sampai R5 tidak dapat dijalankan. Program menampilkan **"Kesimpulan: tidak ada"** beserta batas keberlakuan.
 
-![Kasus 3](screenshot/kasus3.png)
+![Kasus 3](screenshot/Kasus3.png)
 
 ## 6. Batas Keberlakuan
 
